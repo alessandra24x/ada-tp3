@@ -1,0 +1,26 @@
+body {
+  background-image: url("old-paper-background.jpg");
+}
+body p {
+  margin-top: 1rem;
+}
+
+.name-container {
+  margin-top: 2rem;
+}
+
+.error-message {
+  color: red;
+}
+
+h3 {
+  margin-top: 1rem;
+  text-align: center;
+  color: green;
+}
+
+.pay-method-buttons {
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

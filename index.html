@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="name-container col-md-6 offset-3">
+                <div class="row">
+
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Ingrese su nombre</label>
+                        <input type="text" id="user-name" class="form-control" name="name" placeholder="Nombre">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="accept-name">Aceptar</button>
+                    <div id="name-validation-message"></div>
+                </form>
+                <div class="form-group">
+                    <div class="app-actions" style="display:none;">
+                        <button type="button" class="btn btn-primary btn-sm" data-options-button="buy">Comprar</button>
+                        <button type="button" class="btn btn-primary btn-sm" data-options-button="debt">Conocer deuda</button>
+                        <button type="button" class="btn btn-primary btn-sm" data-options-button="unfollow">Dar de baja</button>
+                        <button type="button" class="btn btn-primary btn-sm" data-options-button="help">Ayuda</button>
+                        <button type="button" class="btn btn-primary btn-sm" data-options-button="exit">Salir</button>
+                    </div>
+                </div>
+                <div id="message-container"></div>
+                <div class="form-group">
+                    <form id="product-container" style="display:none;">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="text" id="product" placeholder="Producto">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="number" id="price" placeholder="Precio">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="accept-product">Aceptar</button>
+                    </form>
+                </div>
+                <div class="container" id="table-container">
+                </div>
+                <div class="pay">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Selecciona el medio de pago</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="pay-method-buttons">
+                        <button type="button" data-pay-method="cash" class="btn btn-primary btn-sm">Efectivo</button>
+                        <button type="button" data-pay-method="debit-card" class="btn btn-primary btn-sm">Tarjeta
+                            de Debito</button>
+                        <button type="button" data-pay-method="credit-card" class="btn btn-primary btn-sm">Tarjeta
+                            de Credito</button>
+                        <button type="button" data-pay-method="check" class="btn btn-primary btn-sm">Cheque</button>
+                    </div>
+                    <div class="payment-information" style="display:none;">
+                        <p>Metodo de pago elegido: <span></span></p>
+                    </div>
+
+                    <form class="installments" style="display:none;">
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="1" name="instalment-type" checked>
+                                <label class="form-check-label">1 cuota</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="3" name="instalment-type">
+                                <label class="form-check-label">3 cuotas</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="6" name="instalment-type">
+                                <label class="form-check-label">6 cuotas</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="12" name="instalment-type">
+                                <label class="form-check-label">12 cuotas</label>
+                            </div>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-success" style="display:none;" id="confirm-payment">Aceptar</button>
+                    <div class="total">
+                        <h3 id="total"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
